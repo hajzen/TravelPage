@@ -1,0 +1,68 @@
+@import "./globals.css";
+
+@layer base {
+    body {
+        font-family: var(--font-workSans);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-crimsonText);
+        font-weight: bold;
+        line-height: 125%;
+    }
+
+    h1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        @apply text-[1.75rem] lg:text-[2.5rem];
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+}
+
+/* To create own classes */
+@layer components {
+    .sub-heading {
+        font-size: 1.25rem;
+        line-height: 125%;
+    }
+
+    .label {
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+
+    .hover_link {
+        @apply transition-all;
+    }
+
+    .hover_link_after {
+        @apply relative transition-all after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-200 after:content-[''] hover:after:left-0 hover:after:w-full;
+    }
+}
